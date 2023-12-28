@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+</head>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-pink w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Party<br>Time</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Homepage</a> 
+    <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Showcase</a>
+    <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">About Us</a>  
+    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Services</a> 
+    <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Customer Reviews</a> 
+    <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Packages</a> 
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact Us</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-pink w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-pink w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Party Time</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>Homepage</b></h1>
+    <h1 class="w3-xxxlarge w3-text-pink"><b>Showcase.</b></h1>
+    <hr style="width:50px;border:5px solid pink" class="w3-round">
+  </div>
+  
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="https://images.unsplash.com/photo-1558301211-0d8c8ddee6ec?q=80&w=1872&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" style="width:100%; height:300px;" onclick="onClick(this)" alt="Concrete meets bricks">
+      <img src="https://images.unsplash.com/photo-1607977166054-ba266c446ba3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" style="width:100%; height:300px;" onclick="onClick(this)" alt="Light, white and tight scandinavian design">
+      <img src="https://images.unsplash.com/photo-1526505262320-81542978f63b?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" style="width:100%; height:300px;" onclick="onClick(this)" alt="White walls with designer chairs">
+    </div>
+
+    <div class="w3-half">
+      <img src="https://images.unsplash.com/photo-1623244727304-54995b233b1c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" style="width:100%; height:300px;" onclick="onClick(this)" alt="Windows for the atrium">
+      <img src="https://images.unsplash.com/photo-1482731910308-31e96e5d1d28?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" style="width:100%; height:300px;" onclick="onClick(this)" alt="Bedroom and office in one space">
+      <img src="https://images.unsplash.com/photo-1564228511783-821f2f547f44?q=80&w=1991&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" style="width:100%; height:300px;" onclick="onClick(this)" alt="Scandinavian design">
+    </div>
+  </div>
+
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+  <!-- About Us Section -->
+<div class="w3-container" id="about-us" style="margin-top: 75px">
+  <h1 class="w3-xxxlarge w3-text-pink"><b>About Us</b></h1>
+  <hr style="width: 50px; border: 5px solid pink" class="w3-round">
+  <p>Welcome to Party Time, where we turn ordinary moments into extraordinary memories. At Party Time, we believe in the magic of celebrations and the joy they bring to people's lives. With a passion for creating unforgettable experiences, we specialize in event planning and coordination, ensuring every detail is curated to perfection.</p>
+  <p>Our dedicated team works tirelessly to bring your vision to life. From themed events and marquee parties to special celebrations and entertainment, we offer a range of services to make your event truly spectacular. Whether you're a family celebrating a birthday, a hardworking mom organizing a special occasion, or anyone looking to add a touch of magic to their event, Party Time is here to make it happen.</p>
+  <p>Explore our showcase, discover our services, and dive into the customer reviews that reflect the satisfaction and joy experienced by our clients. At Party Time, we take pride in our commitment to excellence, ensuring that each event is a unique and joyous celebration. Contact us to bring your dreams to life and create memories that will last a lifetime!</p>
+</div>
+
+
+ <!-- Services Section -->
+<div class="w3-container" id="packages" style="margin-top: 75px">
+  <h1 class="w3-xxxlarge w3-text-pink"><b>Services</b></h1>
+  <hr style="width: 50px; border: 5px solid pink" class="w3-round">
+
+  <!-- Service Cards -->
+  <div class="w3-row-padding w3-grayscale">
+    <!-- Event Planning and Coordination -->
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-card w3-light-grey w3-hover-shadow">
+        <img src="https://bloximages.newyork1.vip.townnews.com/nola.com/content/tncms/assets/v3/editorial/f/f2/ff25c950-da10-11ed-9ea3-7f892d16b4ff/6438218d52d8e.image.jpg?resize=1396%2C930" alt="Event Planning" style="width: 100%">
+        <div class="w3-container">
+          <h3>Event Planning and Coordination</h3>
+          <p class="w3-opacity">
+            Themed events,
+            Marquee parties,
+            Special celebrations,
+            Entertainment
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Support Services -->
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-card w3-light-grey w3-hover-shadow">
+        <img src="https://preferservice.com/wp-content/uploads/2020/04/Client-support.jpg" alt="Support Services" style="width: 100%">
+        <div class="w3-container">
+          <h3>Support Services</h3>
+          <p class="w3-opacity">
+            Fundraisers,
+            Bespoke catering,
+            Themes and props,
+            Invitations and printworks,
+            Sound and lighting
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Miscellaneous Services -->
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-card w3-light-grey w3-hover-shadow">
+        <img src="https://www.eventer.cc/wp-content/uploads/2019/04/happy-birthday-cake-candles-colorful-den-rozhdeniia-tort-dec-1.jpg" alt="Miscellaneous Services" style="width: 100%">
+        <div class="w3-container">
+          <h3>Miscellaneous Services</h3>
+          <p class="w3-opacity">
+            Other services
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+   <!-- Packages / Pricing Tables -->
+   <div class="w3-container" id="packages" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-pink"><b>Packages</b></h1>
+    <hr style="width:50px;border:5px solid pink" class="w3-round">
+    <p>Party Time offers a curated selection of packages for unique events, catering to various preferences and budgets. These packages include enchanting décor and delectable catering options, ensuring a seamless and joyous experience for both the event and the guests. Explore the Packages Section for the perfect blend of services for a memorable celebration.</p>
+  </div>
+
+<div class="w3-row-padding">
+  <!-- Bronze Package -->
+  <div class="w3-half w3-margin-bottom">
+    <ul class="w3-ul w3-light-pink w3-center w3-card w3-hover-shadow">
+      <li class="w3-pink w3-xlarge w3-padding-32">Bronze</li>
+      <li class="w3-padding-16">Cold buffet</li>
+      <li class="w3-padding-16">Table decorations – centrepieces, gifts</li>
+      <li class="w3-padding-16">DJ entertainment</li>
+      <li class="w3-padding-16">Room decorations – balloons, banners</li>
+      <li class="w3-padding-16">Good deals</li>
+      <li class="w3-padding-16">
+        <h2>$ 75</h2>
+        <span class="w3-opacity"></span>
+      </li>
+      <li class="w3-light-pink w3-padding-24">
+        <button class="w3-button w3-pink w3-padding-large w3-hover-black">Contact Us</button>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Silver Package -->
+  <div class="w3-half w3-margin-bottom">
+    <ul class="w3-ul w3-white w3-center w3-card w3-hover-shadow">
+      <li class="w3-light-blue w3-xlarge w3-padding-32">Silver</li>
+      <li class="w3-padding-16">Invitation design and handling</li>
+      <li class="w3-padding-16">Party cost clear up</li>
+      <li class="w3-padding-16">Live band entertainment</li>
+      <li class="w3-padding-16">Cold buffet and soft drinks</li>
+      <li class="w3-padding-16">GREAT deals</li>
+      <li class="w3-padding-16">
+        <h2>$ 158</h2>
+        <span class="w3-opacity"></span>
+      </li>
+      <li class="w3-white w3-padding-24">
+        <button class="w3-button w3-light-blue w3-padding-large w3-hover-black">Contact Us</button>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Gold Package -->
+  <div class="w3-half w3-margin-bottom">
+    <ul class="w3-ul w3-white w3-center w3-card w3-hover-shadow">
+      <li class="w3-yellow w3-xlarge w3-padding-32">Gold</li>
+      <li class="w3-padding-16">Staff in attendance to ensure complete perfection</li>
+      <li class="w3-padding-16">Finding guest accommodation, booking transport</li>
+      <li class="w3-padding-16">Live band entertainment and magician</li>
+      <li class="w3-padding-16">Hot and Cold buffet and soft drinks</li>
+      <li class="w3-padding-16">Amazing deals</li>
+      <li class="w3-padding-16">
+        <h2>$ 249</h2>
+        <span class="w3-opacity"></span>
+      </li>
+      <li class="w3-white w3-padding-24">
+        <button class="w3-button w3-yellow w3-padding-large w3-hover-black">Contact Us</button>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Custom Package -->
+  <div class="w3-half w3-margin-bottom">
+    <ul class="w3-ul w3-white w3-center w3-card w3-hover-shadow">
+      <li class="w3-orange w3-xlarge w3-padding-32">Custom</li>
+      <li class="w3-padding-16">Contact us for more specific details for your party!</li>
+      <li class="w3-white w3-padding-24">
+        <button class="w3-button w3-orange w3-padding-large w3-hover-black">Contact Us</button>
+      </li>
+    </ul>
+  </div>
+</div>
+
+  <div class="w3-container" id="designers" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-pink"><b>Customer Reviews</b></h1>
+    <hr style="width:50px;border:5px solid pink" class="w3-round">
+    <p>Discover why our customers consistently rave about their extraordinary experiences, as our reviews reflect the unparalleled satisfaction and delight they've found in our products and services.</p>
+    <p><b>These are actual reviews from customers and not AI</b>:</p>
+  </div>
+  
+  <!-- Customer Reviews -->
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-card w3-hover-shadow">
+        <img src="https://nytco-assets.nytimes.com/2019/04/NYTCO-2019-CelesteSloman-GuyGriggs-0077_v1-headshot-square.jpg" alt="John" style="width:100%">
+        <div class="w3-container">
+          <h3>John Smith</h3>
+          <p class="w3-opacity">Family Dad</p>
+          <p>Party Time made my daughter's birthday unforgettable! As a family dad, I loved the seamless planning and attention to detail. From vibrant decorations to delicious treats, every moment was filled with joy. Thank you for making it magical!</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-card w3-hover-shadow">
+        <img src="https://images.unsplash.com/photo-1520177812839-78269c5ed62d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Jane" style="width:100%">
+        <div class="w3-container">
+          <h3>Emma Thompson</h3>
+          <p class="w3-opacity">Hardworking Mother</p>
+          <p>Hats off to Party Time! As a hardworking mom, their seamless planning and attention to detail made my event stress-free and memorable. From decorations to treats, everything was perfect. Thank you, Party Time, for turning it into a fantastic celebration!</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-card w3-hover-shadow">
+        <img src="https://e1.pxfuel.com/desktop-wallpaper/928/355/desktop-wallpaper-sm-on-twitter-random-people.jpg" alt="Mike" style="width:100%">
+        <div class="w3-container">
+          <h3>Mark Keef</h3>
+          <p class="w3-opacity">Salesman</p>
+          <p>Mad respect to Party Time for real! They threw down with the planning, decorations were on point, and them treats? Straight blessings! JazakAllah to Party Time for making it a celebration Mark Keef style!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w3-container" id="contact" style="margin-top: 75px">
+    <h1 class="w3-xxxlarge w3-text-pink"><b>Contact.</b></h1>
+    <hr style="width:50px;border:5px solid pink" class="w3-round">
+    <p>Fill out this form to contact us :)</p>
+    <form action="/action_page.php" target="_blank">
+      <div class="w3-section">
+        <label>Name</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input w3-border" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">
+        <label>Message</label>
+        <input class="w3-input w3-border" type="text" name="Message" required>
+      </div>
+    
+      <!-- Choose Package -->
+      <div class="w3-half w3-margin-bottom">
+        <div class="w3-card w3-white">
+          <div class="w3-container w3-center">
+            <h2>Choose a Package</h2>
+            <p>Select the perfect package for your event</p>
+            <button class="w3-button w3-pink w3-padding-large w3-hover-black">View Packages</button>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Choose Service -->
+      <div class="w3-half w3-margin-bottom">
+        <div class="w3-card w3-white">
+          <div class="w3-container w3-center">
+            <h2>Choose a Service</h2>
+            <p>Explore our services to enhance your event</p>
+            <button class="w3-button w3-pink w3-padding-large w3-hover-black">View Services</button>
+          </div>
+        </div>
+      </div>
+    
+      <button type="submit" class="w3-button w3-block w3-padding-large w3-pink w3-margin-bottom">Send Message</button>
+    </form>
+  </div>
+   
+    <!-- End page content -->
+  </div>
+
+  <!-- W3.CSS Container -->
+  <div class="w3-light-grey w3-container w3-padding-32" style="margin-top:50px;padding-right:30px"><p class="w3-right">Mohamed Elansary <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">NV22034</a></p></div>
+
+  <script>
+  // Script to open and close sidebar
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+  }
+
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+  }
+
+  // Modal Image Gallery
+  function onClick(element) {
+    document.getElementById("img01").src = element.src;
+    document.getElementById("modal01").style.display = "block";
+    var captionText = document.getElementById("caption");
+    captionText.innerHTML = element.alt;
+  }
+  </script>
+
+  </body>
+  </html>
